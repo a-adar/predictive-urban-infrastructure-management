@@ -221,6 +221,9 @@ At this stage, the system includes:
 - Develop adaptive traffic management system
 - Compare AI-driven system against baseline performance
 
+
+---
+
 ## Week 4 Progress
 
 During Week 4, the project evolved into a fully integrated AI-driven system by connecting the prediction model to real-time traffic control within the SUMO simulation.
