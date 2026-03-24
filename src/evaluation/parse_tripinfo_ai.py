@@ -31,6 +31,8 @@ files = {
     "ai_low": "results/tripinfo_ai_low.xml",
     "ai_medium": "results/tripinfo_ai_medium.xml",
     "ai_high": "results/tripinfo_ai_high.xml",
+    "incident_baseline": "results/tripinfo_incident_baseline.xml",
+    "incident_ai": "results/tripinfo_incident_ai.xml",
 }
 
 for scenario, path in files.items():

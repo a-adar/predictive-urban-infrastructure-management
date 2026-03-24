@@ -2,7 +2,7 @@ import traci
 import pandas as pd
 import joblib
 
-SUMO_CONFIG = "simulation/configs/chicago.sumocfg"
+SUMO_CONFIG = "simulation/configs/chicago_incident.sumocfg"
 model = joblib.load("results/model.pkl")
 
 traci.start(["sumo-gui", "-c", SUMO_CONFIG])

@@ -376,6 +376,39 @@ This allows direct measurement of the effect of the AI controller relative to th
 - refine feature engineering and control thresholds
 - write final report sections for results, discussion, and conclusions
 
+
+---
+## Week 6 Progress
+
+During Week 6, the project was extended to include incident handling and robustness testing under disrupted traffic conditions.
+
+### Incident Scenario
+
+- Created an incident-style traffic surge scenario using a denser route file
+- Built a dedicated SUMO configuration for incident evaluation
+- Tested both the fixed-time baseline and the AI-driven controller under the incident
+
+### Evaluation
+
+- Logged simulation outputs for both systems
+- Converted XML outputs into CSV for analysis
+- Compared:
+  - average waiting time
+  - average trip duration
+  - average time loss
+  - vehicles completed
+
+### Key Outcome
+
+This stage adds stress testing to the project and supports evaluation of system robustness, recovery behaviour, and controller performance under dynamic demand conditions.
+
+### Next Steps
+
+- refine recovery-time analysis
+- prepare final experiments and plots
+- begin final report and presentation preparation
+
+
 ## Author
 
 Adnan
