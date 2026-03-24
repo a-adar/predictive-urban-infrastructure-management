@@ -26,15 +26,18 @@ while step < 3600:
     else:
         avg_waiting = 0
 
+    vehicle_count = traci.vehicle.getIDCount()
+
     if step % CONTROL_INTERVAL == 0:
         route_length_proxy = 100
-        duration_proxy = avg_waiting * 100
-        scenario_code = 1  # medium scenario
+        duration_proxy = avg_waiting
+        scenario_code = 2  # medium scenario
 
         features = pd.DataFrame([{
             "routeLength": route_length_proxy,
             "duration": duration_proxy,
-            "scenario": scenario_code
+            "scenario": scenario_code,
+            "vehicleCount": vehicle_count
         }])
 
         predicted_wait = model.predict(features)[0]
@@ -44,18 +47,16 @@ while step < 3600:
 
         tls_ids = traci.trafficlight.getIDList()
 
-        if predicted_wait > 10:
-            if current_mode != "congested":
-                print("Switching to CONGESTED mode")
-                for tls in tls_ids:
-                    traci.trafficlight.setPhaseDuration(tls, 40)
-                current_mode = "congested"
-        else:
-            if current_mode != "normal":
-                print("Switching to NORMAL mode")
-                for tls in tls_ids:
-                    traci.trafficlight.setPhaseDuration(tls, 20)
-                current_mode = "normal"
+        base_duration = 20
+        max_adjustment = 20
+
+        adjustment = min(max(predicted_wait, 0), max_adjustment)
+        new_duration = base_duration + adjustment
+
+        print(f"Applying phase duration: {new_duration:.2f}")
+
+        for tls in tls_ids:
+            traci.trafficlight.setPhaseDuration(tls, new_duration)
 
     step += 1
 

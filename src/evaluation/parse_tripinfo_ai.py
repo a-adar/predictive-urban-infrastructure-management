@@ -7,6 +7,7 @@ def parse_tripinfo(xml_path, csv_path):
     root = tree.getroot()
 
     rows = []
+
     for trip in root.findall("tripinfo"):
         rows.append({
             "id": trip.get("id"),
@@ -15,8 +16,7 @@ def parse_tripinfo(xml_path, csv_path):
             "duration": float(trip.get("duration", 0)),
             "waitingTime": float(trip.get("waitingTime", 0)),
             "timeLoss": float(trip.get("timeLoss", 0)),
-            "routeLength": float(trip.get("routeLength", 0)), 
-            "ai": "results/tripinfo_ai.xml",
+            "routeLength": float(trip.get("routeLength", 0)),
         })
 
     df = pd.DataFrame(rows)
@@ -24,10 +24,17 @@ def parse_tripinfo(xml_path, csv_path):
 
     return df
 
-scenarios = ["low", "medium", "high", "ai"]
+files = {
+    "low": "results/tripinfo_low.xml",
+    "medium": "results/tripinfo_medium.xml",
+    "high": "results/tripinfo_high.xml",
+    "ai_low": "results/tripinfo_ai_low.xml",
+    "ai_medium": "results/tripinfo_ai_medium.xml",
+    "ai_high": "results/tripinfo_ai_high.xml",
+}
 
-for scenario in scenarios:
-    xml_file = Path(f"results/tripinfo_{scenario}.xml")
+for scenario, path in files.items():
+    xml_file = Path(path)
     csv_file = Path(f"results/tripinfo_{scenario}.csv")
 
     if xml_file.exists():

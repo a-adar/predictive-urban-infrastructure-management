@@ -15,7 +15,8 @@ df["scenario"] = df["scenario"].map({
 })
 
 # Features and target
-X = df[["routeLength", "duration", "scenario"]]
+df["vehicleCount"] = df["duration"] * 0.5
+X = df[["routeLength", "duration", "scenario", "vehicleCount"]]
 y = df["waitingTime"]
 
 # Split data

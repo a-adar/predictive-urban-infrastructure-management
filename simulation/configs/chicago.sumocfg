@@ -1,7 +1,7 @@
 <configuration>
     <input>
         <net-file value="../network/chicago.net.xml"/>
-        <route-files value="../routes/chicago_medium.rou.xml"/>
+        <route-files value="../routes/chicago_high.rou.xml"/>
     </input>
 
     <time>
@@ -10,7 +10,7 @@
     </time>
 
     <output>
-        <tripinfo-output value="../../results/tripinfo_ai.xml"/>
-        <edgedata-output value="../../results/edge_data_ai.xml"/>
+        <tripinfo-output value="../../results/tripinfo_ai_high.xml"/>
+        <edgedata-output value="../../results/edge_data_ai_high.xml"/>
     </output>
 </configuration>

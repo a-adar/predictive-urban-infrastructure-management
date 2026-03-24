@@ -331,6 +331,51 @@ This stage satisfies key project requirements:
 - Analyse system stability and robustness
 
 
+---
+
+## Week 5 Progress
+
+During Week 5, the project focused on improving and evaluating the AI-driven traffic controller through controlled experiments across multiple traffic scenarios.
+
+### Controller Improvements
+
+- Replaced binary phase-duration control with smoother proportional adjustment
+- Added vehicle count as an additional live feature for the prediction pipeline
+- Retrained the machine learning model to support the updated feature set
+- Improved the stability of the real-time controller
+
+### Experimental Evaluation
+
+- Ran AI-controlled simulations for:
+  - low traffic
+  - medium traffic
+  - high traffic
+- Saved AI outputs separately for each scenario
+- Converted simulation outputs from XML to CSV
+- Compared AI performance directly against the fixed-time baseline
+
+### Evaluation Metrics
+
+The following metrics were used for comparison:
+- average waiting time
+- average trip duration
+- average time loss
+- total vehicles completed
+
+### Key Outcome
+
+The project now includes a full experimental pipeline:
+
+Simulation → Data Extraction → Prediction → Adaptive Control → Evaluation
+
+This allows direct measurement of the effect of the AI controller relative to the baseline system.
+
+### Next Steps
+
+- analyse strengths and limitations of the AI controller
+- refine feature engineering and control thresholds
+- write final report sections for results, discussion, and conclusions
+
 ## Author
 
 Adnan
