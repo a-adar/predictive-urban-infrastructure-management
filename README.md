@@ -146,6 +146,81 @@ During Week 1, the focus was on project planning, system design, and environment
 
 \---
 
+## Week 3 Progress
+
+During Week 3, the project transitioned from a simulation-based system to an AI-driven predictive system by developing a machine learning model using the generated traffic data.
+
+### Dataset Construction
+
+- Combined simulation outputs from multiple traffic scenarios:
+  - low traffic
+  - medium traffic
+  - high traffic
+- Extracted key features from SUMO outputs (`tripinfo.xml` → CSV):
+  - route length
+  - travel duration
+  - waiting time
+- Created a unified dataset (`dataset.csv`) for machine learning
+
+---
+
+### Prediction Task Definition
+
+- Defined the prediction goal as:
+  
+  **Predict vehicle waiting time based on traffic conditions**
+
+- Selected features:
+  - route length
+  - travel duration
+  - traffic scenario (low, medium, high)
+
+- Target variable:
+  - waiting time
+
+---
+
+### Machine Learning Model
+
+- Implemented a baseline model using Linear Regression
+- Split dataset into training and testing sets
+- Trained model to predict waiting time from input features
+
+---
+
+### Evaluation
+
+- Evaluated model performance using Mean Absolute Error (MAE)
+- Generated prediction vs actual plots to visualise accuracy
+
+---
+
+### Key Result
+
+- Successfully built a working predictive model for traffic waiting time
+- Model captures general trends in congestion behaviour across different traffic scenarios
+
+---
+
+### Project Progress Summary
+
+At this stage, the system includes:
+
+- A real-world traffic simulation (Chicago road network)
+- Multiple traffic scenarios (low, medium, high)
+- A fixed-time baseline system
+- Data extraction and processing pipeline
+- A working machine learning model for traffic prediction
+
+---
+
+### Next Steps
+
+- Improve prediction model (e.g., more features or advanced models)
+- Integrate predictions into traffic signal control logic
+- Develop adaptive traffic management system
+- Compare AI-driven system against baseline performance
+
 \## Author
 
 Adnan
