@@ -126,8 +126,6 @@ During Week 1, the focus was on project planning, system design, and environment
 
 
 
-(You can keep this short for now — your detailed log is in `/docs/weekly\_logs/`)
-
 
 
 - Imported real-world Chicago road network
