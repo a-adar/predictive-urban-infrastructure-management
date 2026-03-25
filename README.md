@@ -409,6 +409,34 @@ This stage adds stress testing to the project and supports evaluation of system 
 - begin final report and presentation preparation
 
 
+---
+## Week 7 Progress
+
+During Week 7, the project was extended with a dashboard to present results, scenario comparisons, and incident analysis in a clear and demo-ready format.
+
+### Dashboard Features
+
+- Built a Streamlit dashboard for visualising project outputs
+- Displayed baseline vs AI results across low, medium, and high traffic scenarios
+- Added dedicated incident analysis view
+- Included summary tables and performance plots
+- Added key findings section to support interpretation of results
+
+### Purpose
+
+The dashboard provides a simple interface for demonstrating the integrated AI system and supports final report screenshots, project evaluation, and demo presentation.
+
+### Current Status
+
+The project now includes:
+- simulation environment
+- baseline controller
+- ML prediction model
+- adaptive traffic signal controller
+- incident handling scenario
+- dashboard for presenting results and system behaviour
+
+
 ## Author
 
 Adnan
