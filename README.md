@@ -480,6 +480,44 @@ This phase strengthens the final project by showing:
 - clearer evaluation evidence for the final report
 
 
+## Week 9 Progress
+
+During Week 9, the project was extended with a hierarchical reinforcement learning architecture to explore coordinated network-level and junction-level traffic control.
+
+### Hierarchical RL Extension
+
+- Implemented a two-level RL design:
+  - **Global RL agent** for network-wide traffic mode selection
+  - **Local RL agent** for junction-level signal timing control
+- Enabled interaction between agents through a shared control signal (`global_mode`)
+- Used a shared local RL policy across junctions to keep the system tractable
+
+### Global Agent Role
+
+- Monitors global traffic state using network-level metrics
+- Selects an overall traffic control mode
+- Provides coordination context for local decisions
+
+### Local Agent Role
+
+- Monitors junction-level waiting time and queue length
+- Adjusts signal timing locally
+- Incorporates the current global mode into its decision-making
+
+### Outputs
+
+- Trained hierarchical RL controller on the medium scenario
+- Saved:
+  - global Q-table
+  - local Q-table
+  - hierarchical training reward curve
+- Generated a comparison summary against baseline and previous RL controllers
+
+### Purpose
+
+This extension demonstrates a more advanced AI architecture for urban infrastructure management by combining global coordination with local adaptation. It strengthens the project’s technical depth and provides a richer basis for final evaluation and discussion.
+
+
 ## Author
 
 Adnan

@@ -10,7 +10,7 @@
     </time>
 
     <output>
-        <tripinfo-output value="../../results/tripinfo_rl_medium_improved.xml"/>
-        <edgedata-output value="../../results/edge_rl_medium_improved.xml"/>
+        <tripinfo-output value="../../results/tripinfo_hierarchical_rl_medium.xml"/>
+        <edgedata-output value="../../results/edge_hierarchical_rl_medium.xml"/>
     </output>
 </configuration>
