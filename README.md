@@ -420,10 +420,6 @@ During Week 7, the project was extended with a dashboard to present results, sce
 - Included summary tables and performance plots
 - Added key findings section to support interpretation of results
 
-### Purpose
-
-The dashboard provides a simple interface for demonstrating the integrated AI system and supports final report screenshots, project evaluation, and demo presentation.
-
 ### Current Status
 
 The project now includes:
@@ -471,13 +467,6 @@ During Week 8, the project was extended with advanced evaluation and a reinforce
   - RL analysis section
   - reroute incident comparison in the incident page
 
-### Purpose
-
-This phase strengthens the final project by showing:
-- advanced AI experimentation
-- comparison of multiple control strategies
-- robustness testing under disruption
-- clearer evaluation evidence for the final report
 
 
 ## Week 9 Progress
@@ -513,9 +502,29 @@ During Week 9, the project was extended with a hierarchical reinforcement learni
   - hierarchical training reward curve
 - Generated a comparison summary against baseline and previous RL controllers
 
-### Purpose
+This has underperformed because not enough simulations were run for training. Maybe if I had more time I could have managed.
 
-This extension demonstrates a more advanced AI architecture for urban infrastructure management by combining global coordination with local adaptation. It strengthens the project’s technical depth and provides a richer basis for final evaluation and discussion.
+
+### How to Run the Project
+## Install dependencies
+pip install -r requirements.txt
+
+Make sure:
+
+SUMO is installed
+SUMO_HOME environment variable is set
+## Run base SUMO simulation
+sumo-gui -c simulation/configs/chicago.sumocfg
+## Run predictive ML controller
+python src/control/run_ai_controller.py
+## Run RL controller
+python src/rl/evaluate_q_learning.py
+## Run hierarchical RL controller (advanced)
+python src/rl/evaluate_hierarchical_q_learning.py
+## Run incident reroute scenario
+python src/control/incident_reroute_controller.py
+## Launch dashboard
+streamlit run src/dashboard/app.py
 
 
 ## Author
