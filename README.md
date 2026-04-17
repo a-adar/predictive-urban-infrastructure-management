@@ -434,6 +434,51 @@ The project now includes:
 - incident handling scenario
 - dashboard for presenting results and system behaviour
 
+## Week 8 Progress
+
+During Week 8, the project was extended with advanced evaluation and a reinforcement learning (RL) controller to strengthen the AI component and provide a richer comparison against the baseline and predictive ML controller.
+
+### Reinforcement Learning Extension
+
+- Implemented a Q-learning traffic signal controller as an advanced AI extension
+- Defined RL state using live traffic metrics from the SUMO simulation
+- Used reward-driven optimisation to learn traffic signal timing policies
+- Trained and evaluated the RL controller on the medium traffic scenario
+- Compared baseline, original RL, and improved RL performance
+
+### RL Evaluation
+
+- Generated a medium-scenario RL comparison summary
+- Compared:
+  - fixed-time baseline
+  - original RL controller
+  - improved RL controller
+- Produced a dedicated plot for RL waiting-time comparison
+
+### Incident Reroute Extension
+
+- Added a true road-closure incident scenario with vehicle rerouting
+- Tested a stable incident time window for closure and reopening
+- Generated comparison outputs for:
+  - baseline incident
+  - AI incident
+  - incident reroute scenario
+
+### Dashboard Updates
+
+- Updated the Streamlit dashboard to include:
+  - RL mode description
+  - RL analysis section
+  - reroute incident comparison in the incident page
+
+### Purpose
+
+This phase strengthens the final project by showing:
+- advanced AI experimentation
+- comparison of multiple control strategies
+- robustness testing under disruption
+- clearer evaluation evidence for the final report
+
 
 ## Author
 

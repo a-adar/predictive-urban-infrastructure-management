@@ -23,7 +23,7 @@ def parse_tripinfo(xml_path, csv_path):
 
     return df
 
-scenarios = ["low", "medium", "high", "incident_baseline"]
+scenarios = ["low", "medium", "high", "incident_baseline", "incident_ai", "incident_reroute"]
 
 for scenario in scenarios:
     xml_file = Path(f"results/tripinfo_{scenario}.xml")
